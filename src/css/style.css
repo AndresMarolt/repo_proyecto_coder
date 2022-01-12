@@ -1,17 +1,17 @@
 /* --------------------------------------------------------------- */
 @font-face {
   font-family: Aquire;
-  src: url("src/fuente/Aquire-BW0ox.otf") format("opentype");
+  src: url("../fuente/Aquire-BW0ox.otf") format("opentype");
 }
 @font-face {
   font-family: Aquire;
   font-weight: normal;
-  src: url("src/fuente/AquireLight-YzE0o.otf") format("opentype");
+  src: url("../fuente/AquireLight-YzE0o.otf") format("opentype");
 }
 @font-face {
   font-family: Aquire;
   font-weight: bold;
-  src: url("src/fuente/AquireBold-8Ma60.otf") format("opentype");
+  src: url("../fuente/AquireBold-8Ma60.otf") format("opentype");
 }
 /* --------------------------------------------------------------- */
 html {
@@ -37,7 +37,7 @@ main {
 }
 
 header {
-  background-image: url(src/img/5.jpg);
+  background-image: url(../img/5.jpg);
   height: 30rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -708,21 +708,20 @@ footer .footer__contacto {
 }
 
 @media (max-width: 767px) {
-  .local {
+  .locales .local {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding-bottom: 2rem;
   }
-  .local iframe {
+  .locales .local iframe {
     align-self: center;
     width: unset;
     padding-top: 2rem;
   }
-  .local__info {
+  .locales .local__info {
     font-size: 1.5rem;
   }
 }
@@ -733,6 +732,15 @@ footer .footer__contacto {
   }
   .locales-todo .local__info {
     font-size: 1.5rem;
+  }
+
+  .locales .local {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
 }
 /* ---------------------------------------------------------------*/
@@ -820,6 +828,7 @@ form .campos .form-group .form-control {
     width: 100%;
     flex-direction: column;
     text-align: unset;
+    gap: 1rem;
   }
   form .botones .boton-verde, form .botones .boton-rojo {
     padding: 0.2rem;

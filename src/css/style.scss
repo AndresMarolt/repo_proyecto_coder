@@ -52,19 +52,19 @@ $negro: #000;
 
 @font-face {
     font-family: Aquire;
-    src: url("src/fuente/Aquire-BW0ox.otf") format("opentype");
+    src: url("../fuente/Aquire-BW0ox.otf") format("opentype");
 }
 
 @font-face {
     font-family: Aquire;
     font-weight:normal;
-    src: url("src/fuente/AquireLight-YzE0o.otf") format("opentype");
+    src: url("../fuente/AquireLight-YzE0o.otf") format("opentype");
 }
 
 @font-face {
     font-family: Aquire;
     font-weight: bold;
-    src: url("src/fuente/AquireBold-8Ma60.otf") format("opentype");
+    src: url("../fuente/AquireBold-8Ma60.otf") format("opentype");
 }
 
 /* --------------------------------------------------------------- */
@@ -90,7 +90,7 @@ main {
 
 
 header {
-    background-image: url(src/img/5.jpg);
+    background-image: url(../img/5.jpg);
     height: 30rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -761,9 +761,8 @@ footer {
 }
 
 @media(max-width: 767px) {
-    .local {
+    .locales .local {
         @include flex-dgja(column, 2rem, center, center);
-        text-align: center;
         padding-bottom: 2rem;
 
         iframe {
@@ -787,6 +786,11 @@ footer {
         .local__info {
             font-size: 1.5rem;
         }
+    }
+
+    .locales .local {
+        @include flex-dgja(column, 2rem, center, center);
+        padding-bottom: 2rem;
     }
 }
 
@@ -868,6 +872,7 @@ form {
             width: 100%;
             flex-direction: column;
             text-align: unset;
+            gap: 1rem;
 
             .boton-verde, .boton-rojo {
                 padding: .2rem;
